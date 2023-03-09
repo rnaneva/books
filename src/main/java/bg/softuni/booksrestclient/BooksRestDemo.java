@@ -27,6 +27,7 @@ public class BooksRestDemo implements CommandLineRunner {
         ResponseEntity<BookDto[]> booksResponse =
                 restTemplate.getForEntity(API_URL, BookDto[].class);
 
+
         if(booksResponse.hasBody()){
             BookDto[] books = booksResponse.getBody();
 
